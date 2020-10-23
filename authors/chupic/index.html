@@ -44,7 +44,7 @@
                </h2>
             </header>
             <div class="wrapper">
-                  <p>xcvcxvcxvcxvxcvcxvcxvcxvxcvcxvcxvcxvxcvcxvcxvcxvxcvcxvcxvcxvxcvcxvcxvcxvxcvcxvcxvcxvxcvcxvcxvcxv</p>
+                  <p> &lt;use xlink:href="{{@website.assetsUrl}}/svg/svg-map.svg#arrow-next"/&gt; &lt;/svg&gt; &lt;/div&gt; {{/../nextPost}} &lt;/div&gt; &lt;/nav&gt; {{/checkIfAny}} {{/if}} {{#if @config.post.displayRelatedPosts}} {{#if ../relatedPosts}} &lt;div class="post__related related"&gt; &lt;div class="wrapper"&gt; &lt;h2 class="h5 related__title"&gt; {{ translate 'post.relatedPosts' }} &lt;/h2&gt; {{#each ../relatedPosts}} &lt;article class="related__item"&gt; &lt;div class="feed__meta"&gt; &lt;time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}" class="feed__date"&gt; {{#checkIf @config.custom.formatDate '!=' 'custom'}} {{date cr</p>
             </div>
          </article>
          <article class="feed__item">
@@ -91,6 +91,19 @@
    };
 </script>
 <script defer src="https://chupic.github.io/newdiet/assets/js/scripts.min.js"></script>
+    <script>        
+        var images = document.querySelectorAll('img[loading]');
+
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }
+    </script>
 
 
 </body>
