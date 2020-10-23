@@ -2426,3 +2426,20 @@ textarea {
 .top.is-visible{
 display:none;
 }
+.wrapper p{
+padding: 0 15px 0 15px;
+    font-size: 1.5rem;
+    margin: 0;
+    color: #404040;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
+    line-height: 1.3;
+}
