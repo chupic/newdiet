@@ -155,6 +155,6 @@ body {
     padding: 4px 8px;
     display: inline-block;
 }
-.post_tagli:nth-of-type(1n+2) {
+.post_tag li:nth-last-of-type(1n+3) {
     display: none;
 } 
